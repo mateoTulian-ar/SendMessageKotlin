@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SendMessage</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="etMessage">Write your message here</string>
+    <string name="btSend">Send</string>
+    <string name="tvTitle">Application</string>
+    <string name="ivDone">Image of received message icon\n</string>
+</resources>

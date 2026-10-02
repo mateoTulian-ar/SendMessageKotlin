@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="tvTitle_textSize">34dp</dimen>
+    <dimen name="tvMessageReceive_size">40dp</dimen>
+    <dimen name="tvMessageReceive_height">65dp</dimen>
+</resources>
