@@ -8,8 +8,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sendmessage.model.Message
-import kotlin.jvm.java
 
+
+/**
+ * @author Mateo Tulian
+ * @version 1.0
+ * @see android.widget.EditText
+ * @see android.widget.TextView
+ */
 class ViewMessageActivity : AppCompatActivity() {
     companion object {
         const val TAG: String = "LogViewMessageActivity"
@@ -24,14 +30,18 @@ class ViewMessageActivity : AppCompatActivity() {
         // 1. Vinculamos los dos TextViews de tu XML
         val tvSenderName = findViewById<TextView>(R.id.tvSenderName)
         val tvMessage = findViewById<TextView>(R.id.textView2)
+        val bundle = intent.extras
+        if(bundle != null) {
+            // 2. Recuperamos el objeto Message serializado completo del bundle
+            //val message = intent.extras?.getSerializable("KEY_MESSAGE", Message::class.java)
 
-        // 2. Recuperamos el objeto Message serializado completo del bundle
-        val message = intent.extras?.getSerializable("KEY_MESSAGE", Message::class.java)
+            val message = bundle.getParcelable("KEY_MESSAGE") as? Message
 
-        // 3. Pintamos los datos en la pantalla extrayéndolos del objeto message
-        if (message != null) {
-            tvSenderName.text = "De: ${message.receiver.name}"
-            tvMessage.text = message.content                   // Muestra el texto que escribió el usuario
+            // 3. Pintamos los datos en la pantalla extrayéndolos del objeto message
+            if (message != null) {
+                tvSenderName.text = "De: ${message.receiver.name}"
+                tvMessage.text =  message.content  // Muestra el texto que escribió el usuario
+            }
         }
 
         Log.d(TAG, "ViewMessageActivity -> onCreate()")

@@ -8,13 +8,12 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sendmessage.model.Message
 import com.example.sendmessage.model.Person
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 /**
- * Esta es la proimera actividad de la aploicacipn que realiza la operaciones:
+ * Esta es la primera actividad de la aplicación que realiza la operaciones:
  * <ol>
- *     <li>Crear un componenete <code>EditText</code> y <code>Button</code> en XML</li>
- *     <li>Lanzar un evento en un componenete visual</li>
+ *     <li>Crear un componente <code>EditText</code> y <code>Button</code> en XML</li>
+ *     <li>Lanzar un evento en un componente visual</li>
  *     <li>Crea el <code>Intent</code> junto con el <code>Bundle</code> para pasar a otra actividad</li>
  *     <li> El ciclo de vida de la activity </li>
  *     <li>Ver la pila de actividades</li>
@@ -37,7 +36,7 @@ class SendMessageActivity : AppCompatActivity() {
 
 
     /**
-     * Método de creacion de una actividad
+     * Método de creación de una actividad
      * @param android.os.Bundle
      */
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,19 +57,22 @@ class SendMessageActivity : AppCompatActivity() {
     }
 
     /**
-     * Funcion que crea un mensaje con la informacion de la persona que envia y de la persona que debe
-     * recgoger el mensaje
+     * Función que crea un mensaje con la información de la persona que envía y de la persona que debe
+     * recoger el mensaje
      */
     private fun sendMessage() {
         // 1 crear el intent
         val intent = Intent(this, ViewMessageActivity::class.java)
         // 2 crear el bundle para empaquetar los datos
         val bundle = Bundle()
-        // 3 Crear la informacion del mensaje
+        // 3 Crear la información del mensaje
         val sender = Person("123456789", "Mateo", "Tulian Moses")
         val receiver = Person("987654321", "Mamá", "Moses Maino")
         val message = Message(1, etMessageText.text.toString(), sender, receiver)
-        bundle.putSerializable("KEY_MESSAGE", message)
+
+        // bundle.putSerializable("KEY_MESSAGE", message)
+
+        bundle.putParcelable("KEY_MESSAGE", message)
         intent.putExtras(bundle)
         startActivity(intent)
     }

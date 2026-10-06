@@ -13,6 +13,11 @@
 
 ---
 
+## Captuas de pantalla
+[Pantalla de envío](images/send_message.png)
+[Pantalla del mensaje](images/view_message.png)
+
+---
 ## 📁 Estructura del Proyecto
 
 ```text
