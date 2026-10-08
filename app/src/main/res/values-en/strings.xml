@@ -6,5 +6,6 @@
     <string name="etMessage">Write your message here</string>
     <string name="btSend">Send</string>
     <string name="tvTitle">Application</string>
-    <string name="ivDone">Image of received message icon</string>
+    <string name="ivDone">Image of a heart icon</string>
+    <string name="sender">From:</string>
 </resources>

@@ -37,7 +37,6 @@ class SendMessageActivity : AppCompatActivity() {
 
     /**
      * Método de creación de una actividad
-     * @param android.os.Bundle
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,8 +68,6 @@ class SendMessageActivity : AppCompatActivity() {
         val sender = Person("123456789", "Mateo", "Tulian Moses")
         val receiver = Person("987654321", "Mamá", "Moses Maino")
         val message = Message(1, etMessageText.text.toString(), sender, receiver)
-
-        // bundle.putSerializable("KEY_MESSAGE", message)
 
         bundle.putParcelable("KEY_MESSAGE", message)
         intent.putExtras(bundle)

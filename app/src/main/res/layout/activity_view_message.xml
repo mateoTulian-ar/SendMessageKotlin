@@ -13,7 +13,7 @@
     <TextView
         android:id="@+id/tvSenderName"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/tvMessageReceive_height"
+        android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:text=""
         android:textAlignment="center"
@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/tvMessageReceive_height"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text=""
         android:textAlignment="center"
@@ -37,6 +37,6 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:contentDescription="@string/ivDone"
-        app:srcCompat="@drawable/outline_check_circle_24"
-        app:tint="@color/green"/>
+        app:srcCompat="@drawable/outline_bookmark_heart_24"
+        app:tint="@color/red"/>
 </LinearLayout>

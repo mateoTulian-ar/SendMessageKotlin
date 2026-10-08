@@ -4,6 +4,7 @@
     <string name="second_fragment_label">Segundo fragmento</string>
     <string name="etMessage">Escribe tu mensaje acá</string>
     <string name="btSend">Enviar</string>
-    <string name="tvTitle">Aplicación</string>
-    <string name="ivDone">Imagen del icono del mensaje recibido</string>
+    <string name="tvTitle">Aplicacion</string>
+    <string name="ivDone">Imagen del icono de un corazón</string>
+    <string name="sender">De:</string>
 </resources>

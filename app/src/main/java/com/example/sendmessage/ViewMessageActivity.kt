@@ -1,5 +1,6 @@
 package com.example.sendmessage
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -21,6 +22,7 @@ class ViewMessageActivity : AppCompatActivity() {
         const val TAG: String = "LogViewMessageActivity"
     }
 
+    @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +41,8 @@ class ViewMessageActivity : AppCompatActivity() {
 
             // 3. Pintamos los datos en la pantalla extrayéndolos del objeto message
             if (message != null) {
-                tvSenderName.text = "De: ${message.receiver.name}"
+                val prefijo = getString(R.string.sender)
+                tvSenderName.text = "$prefijo ${message.receiver.name}"
                 tvMessage.text =  message.content  // Muestra el texto que escribió el usuario
             }
         }
